@@ -203,12 +203,12 @@ public class CharacterCardUI : MonoBehaviour
         Sequence sequence = DOTween.Sequence();
 
         sequence
-            .Append(transform.DORotate(new Vector3(180, 180, 0), m_flipDuration / 2, RotateMode.LocalAxisAdd))
+            .Append(transform.DORotate(new Vector3(0, 90, 0), m_flipDuration / 2, RotateMode.WorldAxisAdd))
             .AppendCallback(() =>
             {
                 ChangeSide(m_isBackSide);
             })
-            .Append(transform.DORotate(new Vector3(180, 180, 0), m_flipDuration / 2, RotateMode.LocalAxisAdd));
+            .Append(transform.DORotate(new Vector3(0, -90, 0), m_flipDuration / 2, RotateMode.WorldAxisAdd));
     }
 
 
