@@ -6,6 +6,9 @@ public class CharacterCardUI : MonoBehaviour
 {
     [Header("General")]
     [SerializeField] private bool m_isBackSide;
+    [SerializeField] private Sprite m_spriteFrontBackground;
+    [SerializeField] private Sprite m_spriteBackBackground;
+    [SerializeField] private Image imageBackground;
     [SerializeField] private GameObject frontSide;
     [SerializeField] private GameObject backSide;
 
@@ -186,34 +189,33 @@ public class CharacterCardUI : MonoBehaviour
         if (imageAvatarBackground is not null) imageAvatarBackground.sprite = m_spriteAvatarBackground;
         if (imageAvatar is not null) imageAvatar.sprite = m_spriteAvatar;
 
+        ChangeSide(m_isBackSide);
+    }
+#endif
 
-        if (m_isBackSide)
+
+    private void ChangeSide(bool isBackSide)
+    {
+        Sprite background;
+
+        if (isBackSide)
         {
             backSide?.SetActive(true);
             frontSide?.SetActive(false);
+
+            background = m_spriteBackBackground;
         }
         else
         {
             backSide?.SetActive(false);
             frontSide?.SetActive(true);
+
+            background = m_spriteFrontBackground;
         }
-    }
-#endif
 
-
-    public void Flip()
-    {
-        m_isBackSide = !m_isBackSide;
-
-        if (m_isBackSide && backSide is not null)
+        if (imageBackground is not null)
         {
-            backSide.SetActive(true);
-            frontSide.SetActive(false);
-        }
-        else if (frontSide is not null)
-        {
-            backSide.SetActive(false);
-            frontSide.SetActive(true);
+            imageBackground.sprite = background;
         }
     }
 }

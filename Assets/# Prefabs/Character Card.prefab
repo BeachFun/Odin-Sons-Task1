@@ -1618,6 +1618,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isBackSide: 0
+  m_spriteFrontBackground: {fileID: 21300000, guid: 8f2dd0e6e8c1751449fd201629fa8f6f, type: 3}
+  m_spriteBackBackground: {fileID: 21300000, guid: f7eb0b955053916488b6c43bfe035540, type: 3}
+  imageBackground: {fileID: 3042020861076858115}
   frontSide: {fileID: 8601560739787566489}
   backSide: {fileID: 8136830758744488077}
   m_familyName: 
