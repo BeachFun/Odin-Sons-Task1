@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ public class CharacterCardUI : MonoBehaviour
 {
     [Header("General")]
     [SerializeField] private bool m_isBackSide;
+    [SerializeField] private float m_flipDuration;
     [SerializeField] private Sprite m_spriteFrontBackground;
     [SerializeField] private Sprite m_spriteBackBackground;
     [SerializeField] private Image imageBackground;
@@ -192,6 +194,22 @@ public class CharacterCardUI : MonoBehaviour
         ChangeSide(m_isBackSide);
     }
 #endif
+
+
+    public void Flip()
+    {
+        m_isBackSide = !m_isBackSide;
+
+        Sequence sequence = DOTween.Sequence();
+
+        sequence
+            .Append(transform.DORotate(new Vector3(180, 180, 0), m_flipDuration / 2, RotateMode.LocalAxisAdd))
+            .AppendCallback(() =>
+            {
+                ChangeSide(m_isBackSide);
+            })
+            .Append(transform.DORotate(new Vector3(180, 180, 0), m_flipDuration / 2, RotateMode.LocalAxisAdd));
+    }
 
 
     private void ChangeSide(bool isBackSide)
