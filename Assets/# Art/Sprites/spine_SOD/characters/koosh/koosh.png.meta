@@ -485,7 +485,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      koosh_0: -2736657516038898399
+      koosh_1: -1678714498817965893
+      koosh_10: -5580794529778663186
+      koosh_11: -4156112681958442973
+      koosh_12: -8552037620026229702
+      koosh_13: -2371175907664787336
+      koosh_2: -7049560248339793998
+      koosh_3: 2945693590213380614
+      koosh_4: -8385352793680449520
+      koosh_5: -3798152416347036115
+      koosh_6: 6735141968156073473
+      koosh_7: 3336861143382585929
+      koosh_8: -7153778869983640124
+      koosh_9: -7758425899844179286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

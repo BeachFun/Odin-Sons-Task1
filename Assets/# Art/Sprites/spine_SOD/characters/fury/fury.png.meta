@@ -460,7 +460,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fury_0: -5207577772078591440
+      fury_1: -6423387169009098065
+      fury_10: 651427515442018991
+      fury_11: -3794208021824822550
+      fury_12: 453066828151175658
+      fury_2: 390392988353028183
+      fury_3: 3973101204049430546
+      fury_4: 5578262642649452391
+      fury_5: 2989426034721550110
+      fury_6: 9155375558090897574
+      fury_7: -7969883889076052788
+      fury_8: -2085088416017561110
+      fury_9: 4259131055306364000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
