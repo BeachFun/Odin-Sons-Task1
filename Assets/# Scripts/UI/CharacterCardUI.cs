@@ -1,34 +1,45 @@
 using DG.Tweening;
+using Spine;
+using Spine.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CharacterCardUI : MonoBehaviour
+public class CharacterCardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("General")]
     [SerializeField] private bool m_isBackSide;
     [SerializeField] private float m_flipDuration;
+    [SerializeField] private bool m_isAnimated;
+
+    [Header("Base")]
     [SerializeField] private Sprite m_spriteFrontBackground;
     [SerializeField] private Sprite m_spriteBackBackground;
+    [Space]
     [SerializeField] private Image imageBackground;
     [SerializeField] private GameObject frontSide;
     [SerializeField] private GameObject backSide;
 
     [Header("Family Name")]
     [SerializeField] private string m_familyName;
+    [Space]
     [SerializeField] private TMP_Text textFrontFamilyName;
 
     [Header("Character Name")]
     [SerializeField] private string m_name;
+    [Space]
     [SerializeField] private TMP_Text textFrontName;
     [SerializeField] private TMP_Text textBackName;
 
     [Header("Character Description")]
     [SerializeField] private string m_descriptin;
+    [Space]
     [SerializeField] private TMP_Text textDescription;
 
     [Header("Family Rune")]
     [SerializeField] private Sprite m_spriteFamilyRune;
+    [Space]
     [SerializeField] private Image imageFamilyRune1;
     [SerializeField] private Image imageFamilyRune2;
 
@@ -36,12 +47,14 @@ public class CharacterCardUI : MonoBehaviour
     [SerializeField] private string m_perc1Format = "фамильная руна:\n{0}";
     [SerializeField] private string m_perc1Name;
     [SerializeField] private TMP_Text textPerc1;
+    [Space]
     [SerializeField] private Image imagePerc1;
 
     [Header("Ace Aspect Perc")]
     [SerializeField] private string m_perc2Format = "аспект асов:\n{0}";
     [SerializeField] private string m_perc2Name;
     [SerializeField] private Sprite m_spritePerc2;
+    [Space]
     [SerializeField] private TMP_Text textPerc2;
     [SerializeField] private Image imagePerc2;
 
@@ -52,15 +65,21 @@ public class CharacterCardUI : MonoBehaviour
 
     [Header("Person")]
     [SerializeField] private Sprite m_spritePerson;
+    [SerializeField] private SkeletonDataAsset m_skeletonPersonDA;
+    [Space]
     [SerializeField] private Image imagePerson;
+    [SerializeField] private SkeletonGraphic skeletonPerson;
 
     [Header("Avatar")]
     [SerializeField] private Sprite m_spriteAvatarBorder;
     [SerializeField] private Sprite m_spriteAvatarBackground;
     [SerializeField] private Sprite m_spriteAvatar;
+    [SerializeField] private SkeletonDataAsset m_skeletonAvatarDA;
+    [Space]
     [SerializeField] private Image imageAvatarBorder;
     [SerializeField] private Image imageAvatarBackground;
     [SerializeField] private Image imageAvatar;
+    [SerializeField] private SkeletonGraphic skeletonAvatar;
 
     private float m_indicator1Rate;
     private float m_indicator2Rate;
@@ -192,23 +211,76 @@ public class CharacterCardUI : MonoBehaviour
         if (imageAvatar is not null) imageAvatar.sprite = m_spriteAvatar;
 
         ChangeSide(m_isBackSide);
+
+        if (m_isAnimated)
+        {
+            imageAvatar?.gameObject.SetActive(false);
+            imagePerson?.gameObject.SetActive(false);
+
+            skeletonAvatar?.gameObject.SetActive(true);
+            skeletonPerson?.gameObject.SetActive(true);
+        }
+        else
+        {
+            imageAvatar?.gameObject.SetActive(true);
+            imagePerson?.gameObject.SetActive(true);
+
+            skeletonAvatar?.gameObject.SetActive(false);
+            skeletonPerson?.gameObject.SetActive(false);
+        }
+
+        if (skeletonAvatar is not null) skeletonAvatar.skeletonDataAsset = m_skeletonAvatarDA;
+        if (skeletonPerson is not null) skeletonPerson.skeletonDataAsset = m_skeletonPersonDA;
     }
 #endif
+
+
+    void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
+    {
+        if (!m_isAnimated) return;
+
+        if (!m_isBackSide)
+        {
+            skeletonPerson.AnimationState.Complete += OnIdleToInTransition;
+        }
+    }
+
+    void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
+    {
+        if (!m_isAnimated) return;
+
+        if (!m_isBackSide)
+        {
+            skeletonPerson.AnimationState.Complete += OnInToIdleTransition;
+        }
+    }
+
+    private void OnInToIdleTransition(TrackEntry track)
+    {
+        skeletonPerson.AnimationState.SetAnimation(0, "idle", true);
+        skeletonPerson.AnimationState.Complete -= OnInToIdleTransition;
+    }
+
+    private void OnIdleToInTransition(TrackEntry track)
+    {
+        skeletonPerson.AnimationState.SetAnimation(0, "in", true);
+        skeletonPerson.AnimationState.Complete -= OnIdleToInTransition;
+    }
 
 
     public void Flip()
     {
         m_isBackSide = !m_isBackSide;
 
-        Sequence sequence = DOTween.Sequence();
+        DG.Tweening.Sequence sequence = DOTween.Sequence();
 
         sequence
-            .Append(transform.DORotate(new Vector3(0, 90, 0), m_flipDuration / 2, RotateMode.WorldAxisAdd))
+            .Append(transform.DORotate(new Vector3(0, 90, 0), m_flipDuration / 2, DG.Tweening.RotateMode.WorldAxisAdd))
             .AppendCallback(() =>
             {
                 ChangeSide(m_isBackSide);
             })
-            .Append(transform.DORotate(new Vector3(0, -90, 0), m_flipDuration / 2, RotateMode.WorldAxisAdd));
+            .Append(transform.DORotate(new Vector3(0, -90, 0), m_flipDuration / 2, DG.Tweening.RotateMode.WorldAxisAdd));
     }
 
 

@@ -750,6 +750,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ec8cd7a1e5a77944190f134567c53a77, type: 3}
+    - target: {fileID: 483706783668662562, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c3cd128efdd862e46a9aeb807d4adc0e, type: 2}
     - target: {fileID: 1092486744100445723, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 39.99997
@@ -802,10 +806,6 @@ PrefabInstance:
       value: "\u041F\u0440\u0435\u0434\u0441\u043A\u0430\u0437\u0438\u0442\u0435\u043B\u0438"
       objectReference: {fileID: 0}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
-      propertyPath: m_isBackSide
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spritePerc2
       value: 
       objectReference: {fileID: 21300000, guid: 272bf57f5bbe57444825354473f3e591, type: 3}
@@ -818,6 +818,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: de1c974dae4bb504fa2ff26984c4f513, type: 3}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonAvatarDA
+      value: 
+      objectReference: {fileID: 11400000, guid: c3cd128efdd862e46a9aeb807d4adc0e, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonPersonDA
+      value: 
+      objectReference: {fileID: 11400000, guid: c73d3169ab1c67f42b789df83ba758f6, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spriteFamilyRune
       value: 
       objectReference: {fileID: 21300000, guid: ec8cd7a1e5a77944190f134567c53a77, type: 3}
@@ -829,6 +837,10 @@ PrefabInstance:
       propertyPath: m_spriteAvatarBackground
       value: 
       objectReference: {fileID: 21300000, guid: c4bb006ea9390e544bc89a22c79c2854, type: 3}
+    - target: {fileID: 1456226047995622035, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c73d3169ab1c67f42b789df83ba758f6, type: 2}
     - target: {fileID: 2232438251007694505, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -849,6 +861,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042020861076858115, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f2dd0e6e8c1751449fd201629fa8f6f, type: 3}
     - target: {fileID: 3342924522181572870, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2707,6 +2723,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3002de7cba653434b9214a5dabcf6378, type: 3}
+    - target: {fileID: 483706783668662562, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bf1165e25d0a8f40b355a6ab98ea059, type: 2}
     - target: {fileID: 1092486744100445723, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 39.99997
@@ -2759,10 +2779,6 @@ PrefabInstance:
       value: "\u0421\u0440\u0435\u0431\u0440\u043E\u0435\u0434\u044B"
       objectReference: {fileID: 0}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
-      propertyPath: m_isBackSide
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spritePerc2
       value: 
       objectReference: {fileID: 21300000, guid: f4eb632a7c43c994fb3582c6c146060e, type: 3}
@@ -2775,6 +2791,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2934b53055d0fc143a5801cbd66a1ecc, type: 3}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonAvatarDA
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bf1165e25d0a8f40b355a6ab98ea059, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonPersonDA
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a4766b8015427e41b0961ab4bfc3ad1, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spriteFamilyRune
       value: 
       objectReference: {fileID: 21300000, guid: 3002de7cba653434b9214a5dabcf6378, type: 3}
@@ -2786,6 +2810,14 @@ PrefabInstance:
       propertyPath: m_spriteAvatarBackground
       value: 
       objectReference: {fileID: 21300000, guid: 9ce04ef303a6c124f95a126768b8231a, type: 3}
+    - target: {fileID: 1456226047995622035, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: referenceSize.y
+      value: 1757.5162
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456226047995622035, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a4766b8015427e41b0961ab4bfc3ad1, type: 2}
     - target: {fileID: 1658069048762869326, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2810,6 +2842,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2916188489137342485, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5158758
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916188489137342485, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.09651849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916188489137342485, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1757.5162
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042020861076858115, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f2dd0e6e8c1751449fd201629fa8f6f, type: 3}
     - target: {fileID: 3342924522181572870, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3474,6 +3522,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 569748d6b9186ad46832356b93a4b840, type: 3}
+    - target: {fileID: 483706783668662562, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b3175d121efdc294688b801e9f56401c, type: 2}
     - target: {fileID: 1092486744100445723, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 39.99997
@@ -3526,10 +3578,6 @@ PrefabInstance:
       value: "\u041D\u043E\u0440\u043C\u0430\u043D\u043D\u044B"
       objectReference: {fileID: 0}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
-      propertyPath: m_isBackSide
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spritePerc2
       value: 
       objectReference: {fileID: 21300000, guid: f4eb632a7c43c994fb3582c6c146060e, type: 3}
@@ -3542,6 +3590,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: de0179eb37dca2149b306610b847287e, type: 3}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonAvatarDA
+      value: 
+      objectReference: {fileID: 11400000, guid: b3175d121efdc294688b801e9f56401c, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonPersonDA
+      value: 
+      objectReference: {fileID: 11400000, guid: 51e9b000ae7b4944286521613799a594, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spriteFamilyRune
       value: 
       objectReference: {fileID: 21300000, guid: 569748d6b9186ad46832356b93a4b840, type: 3}
@@ -3553,6 +3609,10 @@ PrefabInstance:
       propertyPath: m_spriteAvatarBackground
       value: 
       objectReference: {fileID: 21300000, guid: f679c49f7956ffa40a5f23faf77ae781, type: 3}
+    - target: {fileID: 1456226047995622035, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 51e9b000ae7b4944286521613799a594, type: 2}
     - target: {fileID: 1658069048762869326, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -3589,6 +3649,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042020861076858115, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f2dd0e6e8c1751449fd201629fa8f6f, type: 3}
     - target: {fileID: 3342924522181572870, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3871,6 +3935,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cdc19fa7a1520244fbfe22803dc47839, type: 3}
+    - target: {fileID: 483706783668662562, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c6ca8832a2208438cf0c3f0f5ea877, type: 2}
     - target: {fileID: 1092486744100445723, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 39.99997
@@ -3924,10 +3992,6 @@ PrefabInstance:
       value: "\u0413\u043B\u043E\u0442\u043A\u043E\u0440\u0451\u0432\u044B"
       objectReference: {fileID: 0}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
-      propertyPath: m_isBackSide
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spritePerc2
       value: 
       objectReference: {fileID: 21300000, guid: d79344bc88a51124788ec24e299f7a87, type: 3}
@@ -3940,6 +4004,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 93aec2db62d490b44b43a3ba4c1e845b, type: 3}
     - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonAvatarDA
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c6ca8832a2208438cf0c3f0f5ea877, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_skeletonPersonDA
+      value: 
+      objectReference: {fileID: 11400000, guid: f97ca324d9e7f5c45a684d0a75f75965, type: 2}
+    - target: {fileID: 1376528609011820712, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_spriteFamilyRune
       value: 
       objectReference: {fileID: 21300000, guid: cdc19fa7a1520244fbfe22803dc47839, type: 3}
@@ -3951,6 +4023,10 @@ PrefabInstance:
       propertyPath: m_spriteAvatarBackground
       value: 
       objectReference: {fileID: 21300000, guid: 07938afdefe47e64fbf5544c7e342a97, type: 3}
+    - target: {fileID: 1456226047995622035, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f97ca324d9e7f5c45a684d0a75f75965, type: 2}
     - target: {fileID: 2232438251007694505, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3971,6 +4047,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042020861076858115, guid: a5490896bcb448d4e969bda382738469, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f2dd0e6e8c1751449fd201629fa8f6f, type: 3}
     - target: {fileID: 3342924522181572870, guid: a5490896bcb448d4e969bda382738469, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
