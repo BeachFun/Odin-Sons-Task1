@@ -44,14 +44,14 @@ public class CharacterCardUI : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private Image imageFamilyRune2;
 
     [Header("Family Rune Perc")]
-    [SerializeField] private string m_perc1Format = "фамильная руна:\n{0}";
+    [SerializeField] private string m_perc1Format = "Фамильная руна:\n{0}";
     [SerializeField] private string m_perc1Name;
     [SerializeField] private TMP_Text textPerc1;
     [Space]
     [SerializeField] private Image imagePerc1;
 
     [Header("Ace Aspect Perc")]
-    [SerializeField] private string m_perc2Format = "аспект асов:\n{0}";
+    [SerializeField] private string m_perc2Format = "Аспект асов:\n{0}";
     [SerializeField] private string m_perc2Name;
     [SerializeField] private Sprite m_spritePerc2;
     [Space]
@@ -80,6 +80,11 @@ public class CharacterCardUI : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private Image imageAvatarBackground;
     [SerializeField] private Image imageAvatar;
     [SerializeField] private SkeletonGraphic skeletonAvatar;
+
+    [Header("Avatar rune GFX")]
+    [SerializeField] private SkeletonDataAsset m_skeletonRuneDA;
+    [Space]
+    [SerializeField] private SkeletonGraphic skeletonRuneGFX;
 
     private float m_indicator1Rate;
     private float m_indicator2Rate;
@@ -231,9 +236,19 @@ public class CharacterCardUI : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
         if (skeletonAvatar is not null) skeletonAvatar.skeletonDataAsset = m_skeletonAvatarDA;
         if (skeletonPerson is not null) skeletonPerson.skeletonDataAsset = m_skeletonPersonDA;
+        if (skeletonRuneGFX is not null) skeletonRuneGFX.skeletonDataAsset = m_skeletonRuneDA;
     }
 #endif
 
+    private void Awake()
+    {
+        skeletonRuneGFX.gameObject.SetActive(false);
+    }
+
+    private void Start()
+    {
+        skeletonRuneGFX.AnimationState.Complete += delegate { skeletonRuneGFX.gameObject.SetActive(false); };
+    }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
@@ -241,6 +256,9 @@ public class CharacterCardUI : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
         if (!m_isBackSide)
         {
+            skeletonRuneGFX.gameObject.SetActive(true);
+            skeletonRuneGFX.AnimationState.SetAnimation(0, "action", false);
+
             skeletonPerson.AnimationState.Complete += OnIdleToInTransition;
         }
     }
@@ -248,6 +266,8 @@ public class CharacterCardUI : MonoBehaviour, IPointerEnterHandler, IPointerExit
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
         if (!m_isAnimated) return;
+
+        skeletonRuneGFX.gameObject.SetActive(false);
 
         if (!m_isBackSide)
         {

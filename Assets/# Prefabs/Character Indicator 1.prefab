@@ -297,7 +297,7 @@ MonoBehaviour:
   m_text: "\u043D\u0430\u043A\u043E\u043F\u043B\u0435\u043D\u0438\u0435\\n\u044F\u0440\u043E\u0441\u0442\u0438"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fc2cd715ce92c4dbe81b8c9810226e, type: 2}
-  m_sharedMaterial: {fileID: 7738011343148437110, guid: 56fc2cd715ce92c4dbe81b8c9810226e, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: cba08017d7a28514381a6628c1e9c504, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_text: 20%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fc2cd715ce92c4dbe81b8c9810226e, type: 2}
-  m_sharedMaterial: {fileID: 7738011343148437110, guid: 56fc2cd715ce92c4dbe81b8c9810226e, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: cba08017d7a28514381a6628c1e9c504, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
